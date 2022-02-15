@@ -1,0 +1,303 @@
+1:Javascript Overview:
+ a: What Is Javascript ?
+ Ans:	JavaScript was initially created to “make web pages alive”.
+			The programs in this language are called scripts. They can be written right in a web page’s HTML and run automatically as the page loads.
+ 			Today, JavaScript can execute not only in the browser, but also on the server, or actually on any device that has a special program called the JavaScript engine.
+			The browser has an embedded engine sometimes called a “JavaScript virtual machine”.
+			Different engines have different “codenames”. For example:
+			V8 – in Chrome, Opera and Edge.
+			SpiderMonkey – in Firefox.
+			…There are other codenames like “Chakra” for IE, “JavaScriptCore”, “Nitro” and “SquirrelFish” for Safari, etc.
+
+	b:Client-Side JavaScript ?
+	Ans:Client Side JavaScript is an extended version of JavaScript that enables the enhancement and manipulation of web pages and client browsers. In a 									browser environment , your code will have access to things provided only by the browser, like the document object for the current page, the window, functions 		like alert that pop up a message, etc. The main tasks of Client side JavaScript are validating input, animation, manipulating UI elements, applying styles, 			some calculations are done when you don't want the page to refresh so often. In web developing it's the browser, in the user's machine, that runs this code, 			and is mainly done in javascript . Also, this code must run in a variety of browsers'.
+
+	c: Advantages of JavaScript ?
+	Ans: Speed, Simplicity, Popularity, Interoperability,Server Load, Server Load, Extended Functionality,Versatility,Less Overhead
+
+	d:Limitations of JavaScript ?
+	Ans:Client-side Security,Browser Support,Lack of Debugging Facility,Single Inheritance, Rendering Stopped
+
+	e:JavaScript Development Tools ?
+	Ans:Visual Studio, Sublime Text,WebStorm, codepen,jsfiddle, eclipse.
+
+	f:Where is JavaScript Today?
+	Ans: Javascript is now a very popular programming language now a days in client side like React.js/Vue.js/Angular.js and as well as server side scripting 		  			 language like Node.js.
+
+2:JAVASCRIPT – Syntax
+	a:First Javascript Code:
+		<html>
+			<head>
+				<title>JS</title>
+			</head>
+			<body>
+				<p id="example">Nothing here.</p>
+
+				<script>
+					let myvariable = "Hello world!";
+
+					document.getElementById("example").innerHTML = myvariable;
+				</script>
+			</body>
+		</html>
+
+	B:Whitespace and Line Breaks ?
+	 JavaScript ignores spaces, tabs, and newlines that appear in JavaScript programs. You can use spaces, tabs, and newlines freely in your program and you are free to format and indent your programs in a neat and consistent way that makes the code easy to read and understand.
+	
+	c:Semicolons are Optional ?
+		Smicolon should be used every end of line.
+		But now a days frame work and libraries like react and vue.js really don't need semicolon at the end of line'.
+
+	d:Case Sensitivity ?
+		JavaScript is a case-sensitive language. This means that the language keywords, variables, function names, and any other identifiers must always be typed with a consistent capitalization of letters. So the identifiers Time and TIME will convey different meanings in JavaScript.
+
+	e:Comments in JavaScript ?
+		Any text between // and the end of the line will be ignored by JavaScript (will not be executed).
+
+3:JAVASCRIPT – Enabling 
+	a:JavaScript in Internet Explorer 
+		Click Tools > Internet Options.
+		Click the Security tab > Custom Level.
+		In the Scripting section, click Enable for Active Scripting.
+		In the dialog box that displays, click Yes.
+
+	b:JavaScript in Firefox
+		If you’re running Windows OS, in the Firefox window, click Tools > Options.
+		Tip:  If you’re running Mac OS, click the Firefox drop-down list > Preferences.
+		On the Content tab, click the Enable JavaScript check box.
+
+	c:JavaScript in Chrome
+		Click the wrench icon on the toolbar.
+		Click Options > Under the Hood.
+		In the Privacy section, click Content settings.
+		Scroll to the JavaScript section and click Allow all sites to run JavaScript (recommended).
+		Close the Options tab and refresh the browser.
+
+	d:JavaScript in Opera 
+		1. Start your Opera browser
+		Open the “Easy Setup” menu. It’s usually located in the top-right corner of your Opera browser.
+		2. The “Easy Setup” menu
+		Under the Easy Setup menu, scroll down to the very bottom to locate the “Go to browser settings” link, and then click on it.	
+		3. Search for “javascript”
+		You will be directed to the Settings menu where you should see a search box. Input the name “javascript” into the Search Settings box.
+		4. Select “Site Settings”
+		Having searched for “javascript”, your screen will display highlighted sections. These sections are relevant to JavaScript. Scroll down the search results to locate the “Site Settings” tab, and then click it.
+		5. Select “JavaScript”
+		Under the Site Settings tab, find the section labeled “JavaScript” and select it. 
+		6. Activate JavaScript
+		Under the JavaScript section, toggle the “Allowed (recommended)” switch so that it turns blue.
+
+	e:Warning for Non-JavaScript Browsers
+		To let users know about non-JavaScript web browsers, use the <noscript> tag. The HTML <noscript> tag is used to handle the browsers, which do recognize <script> tag but do not support scripting. This tag is used to display alternate text message
+
+		<!DOCTYPE html>
+			<html>
+				<head>
+						<title>HTML noscript Tag</title>
+				</head>
+
+				<body>
+						<script>
+							<!--
+									document.write("Hello JavaScript!")
+							-->
+						</script>
+
+						<noscript>
+							Your browser does not support JavaScript!
+						</noscript>
+				</body>
+			</html>
+
+4:JAVASCRIPT – Placement
+  a:JavaScript in <head>...</head> section
+		If you want to have a script run on some event, such as when a user clicks somewhere, then you will place that script in the head as follows −
+		<html>
+			<head>      
+					<script type = "text/javascript">
+						<!--
+								function sayHello() {
+									alert("Hello World")
+								}
+						//-->
+					</script>     
+			</head>
+			
+			<body>
+					<input type = "button" onclick = "sayHello()" value = "Say Hello" />
+			</body>  
+		</html>
+
+	b:JavaScript in <body>...</body> section
+		If you need a script to run as the page loads so that the script generates content in the page, then the script goes in the <body> portion of the document. In this case, you would not have any function defined using JavaScript. Take a look at the following code.
+		<html>
+			<head>
+			</head>
+			
+			<body>
+					<script type = "text/javascript">
+						<!--
+								document.write("Hello World")
+						//-->
+					</script>
+					
+					<p>This is web page body </p>
+			</body>
+		</html>
+
+	c:JavaScript in <body> and <head> Sections
+		You can put your JavaScript code in <head> and <body> section altogether as follows −
+		<html>
+			<head>
+					<script type = "text/javascript">
+						<!--
+								function sayHello() {
+									alert("Hello World")
+								}
+						//-->
+					</script>
+			</head>
+			
+			<body>
+					<script type = "text/javascript">
+						<!--
+								document.write("Hello World")
+						//-->
+					</script>
+					
+					<input type = "button" onclick = "sayHello()" value = "Say Hello" />
+			</body>
+		</html>
+
+	d:javaScript in External File
+			<html>
+			<head>
+					<script type = "text/javascript" src = "filename.js" ></script>
+			</head>
+			
+			<body>
+					.......
+			</body>
+			</html>
+
+	e:Defer in script
+		The defer attribute is a boolean attribute.
+		If the defer attribute is set, it specifies that the script is downloaded in parallel to parsing the page, and executed after the page has finished parsing.
+		Note: The defer attribute is only for external scripts (should only be used if the src attribute is present).
+
+	f:Async in script 
+		The HTML async attribute is a boolean attribute. When present, it specifies that the script will be executed asynchronously when it is available. This attribute only works for external scripts (and used only in when src attribute is present ).
+		If async is present: The script is downloaded in parallel to parsing the page, and executed as soon as it is available (before parsing completes)
+
+5:JAVASCRIPT – Variables
+	a:JavaScript Data Types:
+		let length = 16;                               // Number
+		let lastName = "Johnson";                      // String
+		let x = {firstName:"John", lastName:"Doe"};    // Object
+		true or false                                  ;Boolean
+		A variable that is set to null is declared as intentionally nothing/empty.; Null
+		A variable that has NOT been assigned a value is of type undefined.; Undefined
+
+		When adding a number and a string, JavaScript will treat the number as a string.
+
+	b:JavaScript Variables: 
+		Using var
+		Using let
+		Using const
+
+	c:JavaScript Variable Scope:
+		JavaScript has 3 types of scope:
+		Block scope
+		Function scope
+		Global scope
+
+	d:JavaScript Variable Names:
+		Variable names cannot contain spaces.
+		Variable names must begin with a letter, an underscore (_) or a dollar sign ($).
+		Variable names can only contain letters, numbers, underscores, or dollar signs.
+		Variable names are case-sensitive.
+
+	e:JavaScript Reserved Words:
+		in JavaScript you cannot use these reserved words as variables, labels, or function names:
+		abstract	arguments	await*	boolean
+		break	byte	case	catch
+		char	class*	const	continue
+		debugger	default	delete	do
+		double	else	enum*	eval
+		export*	extends*	false	final
+		finally	float	for	function
+		goto	if	implements	import*
+		in	instanceof	int	interface
+		let*	long	native	new
+		null	package	private	protected
+		public	return	short	static
+		super*	switch	synchronized	this
+		throw	throws	transient	true
+		try	typeof	var	void
+		volatile	while	with	yield
+
+6:JAVASCRIPT – Operators
+	a:What is an Operator? 
+		JavaScript includes operators same as other languages. An operator performs some operation on single or multiple operands (data value) and produces a result. 
+
+	b:Arithmetic Operators?
+		+	Addition
+		-	Subtraction
+		*	Multiplication
+		**	Exponentiation (ES2016)
+		/	Division
+		%	Modulus (Remainder)
+		++	Increment
+		--	Decrement
+	
+	c:Comparison Operators:
+		==	equal to	x == 8	false	
+		x == 5	true	
+		x == "5"	true	
+		===	equal value and equal type	x === 5	true	
+		x === "5"	false	
+		!=	not equal	x != 8	true	
+		!==	not equal value or not equal type	x !== 5	false	
+		x !== "5"	true	
+		x !== 8	true	
+		>	greater than	x > 8	false	
+		<	less than	x < 8	true	
+		>=	greater than or equal to	x >= 8	false	
+		<=	less than or equal to	x <= 8	true
+
+
+	d:Logical Operators?
+		Logical operators are used to determine the logic between variables or values.
+		&&	and	(x < 10 && y > 1) is true	
+		||	or	(x == 5 || y == 5) is false	
+		!	not	!(x == y) is true
+
+	e:Bitwise Operators ?
+		&	AND	Sets each bit to 1 if both bits are 1
+		|	OR	Sets each bit to 1 if one of two bits is 1
+		^	XOR	Sets each bit to 1 if only one of two bits is 1
+		~	NOT	Inverts all the bits
+		<<	Zero fill left shift	Shifts left by pushing zeros in from the right and let the leftmost bits fall off
+		>>	Signed right shift	Shifts right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off
+		>>>	Zero fill right shift
+
+	f:Assignment Operators ?
+		=	x = y	x = y
+		+=	x += y	x = x + y
+		-=	x -= y	x = x - y
+		*=	x *= y	x = x * y
+		/=	x /= y	x = x / y
+		%=	x %= y	x = x % y
+		<<=	x <<= y	x = x << y
+		>>=	x >>= y	x = x >> y
+		>>>=	x >>>= y	x = x >>> y
+		&=	x &= y	x = x & y
+		^=	x ^= y	x = x ^ y
+		|=	x |= y	x = x | y
+		**=	x **= y	x = x ** y
+
+	g:Miscellaneous Operators ?
+		The Conditional Operator (?:)
+		x > 0 ? x*y : -x*y
+		greeting = "hello " + (username != null ? username : "there");
+
